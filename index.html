@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Курс JavaScript</title>
+	<script>
+let surname = 'Карамзин';
+let Name = 'Виктор';
+let patronymic = 'Геннадьевич';
+let осupation  = 'Преподаватель специальных дисциплин';
+let degree = 'Высшее';
+let category = 'Первая';
+let education = 'Московский государственный институт электронной техники';
+let discipline = 'Информатика';
+let note = 'Почему я здесь?';
+
+let teacherData = [
+                "Карамзин Виктор Геннадьевич", 
+                "Преподаватель специальных дисциплин", 
+                "Высшее", 
+                "Первая", 
+                "Московский государственный институт электронной техники (технический университет)", 
+                "Информатика", 
+                "Я всеволишь пример боже!!!" 
+            ];
+
+			let teacher = {
+                fullName: "Карамзин Виктор Геннадьевич", 
+                occupation: "Преподаватель специальных дисциплин", 
+                degree: "Высшее", 
+                category: "Первая", 
+                education: "Московский государственный институт электронной техники (технический университет)", 
+                discipline: "Информатика",
+                note: "Перестаньте меня использовать как пример!!!" 
+            };
+
+			let Teacher = {
+                surname: "Карамзин", 
+                name: "Виктор", 
+                patronymic: "Геннадьевич", 
+                occupation: "Преподаватель специальных дисциплин", 
+                degree: "Высшее", 
+                category: "Первая", 
+                education: "Московский государственный институт электронной техники (технический университет)", 
+                discipline: "Информатика", 
+                note: "Пожалуйста..." 
+            };
+
+            
+            let line = `
+                <h2>${Teacher.surname} ${Teacher.name} ${Teacher.patronymic}</h2>
+                <p><i>Должность:</i> ${Teacher.occupation}</p>
+                <p><i>Уровень образования:</i> ${Teacher.degree}</p>
+                <p><i>Категория:</i> ${Teacher.category}</p>
+                <p><i>Образование:</i> ${Teacher.education}</p>
+                <p><i>Дисциплина:</i> ${Teacher.discipline}</p>
+                <p><i>Примечание:</i> ${Teacher.note}</p>
+            `;
+
+			let TEacher = {
+                surname: "Карамзин", 
+                name: "Виктор",
+                patronymic: "Геннадьевич", 
+                occupation: "Преподаватель специальных дисциплин", 
+                degree: "Высшее",
+                category: "Первая", 
+                education: [
+                    "Московский государственный институт электронной техники (технический университет),", 
+                    "Санкт-Петербургский государственный университет (СПбГУ)"
+                ], 
+                disciplines: [
+                    "Информатика", 
+                    "Основы программирования", 
+                    "Инжинерная графика"
+                ], 
+                note: " Нету мне спокойствия. Эх..." 
+            };
+
+            
+            let Line = `
+                <h2>${TEacher.surname} ${TEacher.name} ${TEacher.patronymic}</h2>
+                <p><i>Должность:</i> ${TEacher.occupation}</p>
+                <p><i>Уровень образования:</i> ${TEacher.degree}</p>
+                <p><i>Категория:</i> ${TEacher.category}</p>
+                <p><i>Образование:</i>
+                
+                    ${TEacher.education[0]}
+					<p>${TEacher.education[1]}</p>
+					</p>
+                
+                <p><i>Преподаваемые дисциплины:</i></p>
+                <ul>
+                   <li> ${TEacher.disciplines[0]}</li>
+				   <li> ${TEacher.disciplines[1]}</li>
+				   <li> ${TEacher.disciplines[2]}</li>
+                </ul>
+                <p><i>Примечание:</i> ${TEacher.note}</p>
+            `;
+    </script>
+</head>
+<body>
+	
+	<header>
+		<h1 align = "center">Введение в JavaScript</h1>
+	</header>	
+	<h1>Зимнее утро</h1>
+<h3>Александр Сергеевич Пушкин</h3>
+<script src="JS.js"></script>
+<br>
+<br>
+	<div class="content" >
+		<script>
+       document.write("<strong>" + surname + " " + Name + " " + patronymic + "</strong><br><br>");
+            document.write("<strong>Должность:</strong> " +осupation+ ".<br>");
+            document.write("<strong>Уровень образования:</strong> " + degree + ".<br>");
+            document.write("<strong>Категория:</strong> " + category + ".<br>");
+            document.write("<strong>Образование:</strong> " + education + ".<br>");
+            document.write("<strong>Дисциплина:</strong> " + discipline + ".<br>");
+            document.write("<strong>Примечание:</strong> " + note + "<br><br>");
+
+			document.write("<strong>" + teacherData[0] + "</strong><br><br>");
+            document.write("<strong>Должность:</strong> " +teacherData[1]+ ".<br>");
+            document.write("<strong>Уровень образования:</strong> " + teacherData[2] + ".<br>");
+            document.write("<strong>Категория:</strong> " + teacherData[3] + ".<br>");
+            document.write("<strong>Образование:</strong> " + teacherData[4] + ".<br>");
+            document.write("<strong>Дисциплина:</strong> " + teacherData[5] + ".<br>");
+            document.write("<strong>Примечание:</strong> " + teacherData[6] + "<br><br>");
+
+			document.write("<strong>" + teacher.fullName + "</strong><br><br>");
+            document.write("<strong>Должность:</strong> " +teacher.occupation+ ".<br>");
+            document.write("<strong>Уровень образования:</strong> " + teacher.degree + ".<br>");
+            document.write("<strong>Категория:</strong> " + teacher.category + ".<br>");
+            document.write("<strong>Образование:</strong> " + teacher.education + ".<br>");
+            document.write("<strong>Дисциплина:</strong> " + teacher.discipline + ".<br>");
+            document.write("<strong>Примечание:</strong> " + teacher.note + "<br>");
+
+			document.write(line);
+
+			document.write(Line);
+        </script>
+	</div>
+
+    
+</body>
+</html>
